@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    container_name: test-db
+    volumes:
+      - data:/var/lib/postgresql
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DATABASE: test
+    ports:
+      - "5432:5432"
+
+volumes:
+  data: {}
